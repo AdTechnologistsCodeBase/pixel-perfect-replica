@@ -41,7 +41,7 @@ interface Seed {
 
 function build(s: Seed): Project {
   const tracks = defaultTracks();
-  const [tText, tGfx, tVid, tAud] = tracks;
+  const [tText, tGfx, tVid, tAud] = tracks as [Track, Track, Track, Track];
   const scale = s.w / 1920;
   const bar: CanvasElement = {
     id: uid("el"), kind: "rect", name: "Accent Bar",
@@ -107,6 +107,6 @@ export function blankProject(opts: { name: string; type: ProjectType; width: num
     id: uid("prj"), name: opts.name, type: opts.type, status: "draft", width: opts.width, height: opts.height,
     fps: opts.fps, background: opts.background, thumbnail: img("photo-1557672172-298e090bd0f1"),
     createdAt: now, updatedAt: now, duration: 10, elements: [title], tracks,
-    clips: [{ id: uid("clp"), trackId: tracks[0].id, name: "Title", kind: "text", start: 0, duration: 5, elementId: title.id }],
+    clips: [{ id: uid("clp"), trackId: (tracks[0] as Track).id, name: "Title", kind: "text", start: 0, duration: 5, elementId: title.id }],
   };
 }

@@ -49,7 +49,7 @@ export interface Clip {
   start: number;
   duration: number;
   /** links clip to a canvas element (controls visibility) */
-  elementId?: string;
+  elementId?: string | undefined;
 }
 
 export interface Project {
@@ -93,7 +93,7 @@ export interface InspirationRef {
   category: string;
   tags: string[];
   notes: string;
-  collectionId?: string;
+  collectionId?: string | undefined;
   saved: boolean;
   height: number;
 }
@@ -138,6 +138,6 @@ export interface Conversation {
   id: string;
   title: string;
   updatedAt: number;
-  projectId?: string;
+  projectId?: string | undefined;
   messages: ChatMessage[];
 }
