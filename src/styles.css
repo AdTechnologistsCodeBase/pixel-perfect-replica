@@ -195,7 +195,7 @@
 @media (hover: hover) {
   .site-card:hover {
     transform: translateY(-4px);
-    border-color: rgb(110 231 183);
+    border-color: rgb(125 211 252);
     box-shadow: 0 16px 34px -20px rgb(15 23 42 / 35%);
   }
 

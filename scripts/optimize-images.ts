@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readdir, unlink } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
@@ -8,7 +8,7 @@ const publicDirectory = path.join(root, "public");
 const imageDirectory = path.join(publicDirectory, "images");
 
 const photos = [
-  { source: "hospitalfrontimages.webp", name: "hospital-exterior", width: 1360 },
+  { source: "hospitalfrontimages.png", name: "hospital-exterior", width: 1672 },
   { source: "reception-image.jpeg", name: "hospital-reception", width: 720 },
   { source: "cabin-image.jpeg", name: "consultation-room", width: 960 },
   { source: "fullbeds-image.jpeg", name: "patient-ward", width: 720 },
@@ -30,6 +30,18 @@ for (const photo of photos) {
   const widths = [...responsiveWidths, photo.width].filter(
     (width, index, values) => width <= sourceWidth && values.indexOf(width) === index,
   );
+  const expectedOutputs = new Set(widths.map((width) => `${photo.name}-${width}.webp`));
+  const existingOutputs = await readdir(imageDirectory);
+
+  for (const existingOutput of existingOutputs) {
+    if (
+      existingOutput.startsWith(`${photo.name}-`) &&
+      existingOutput.endsWith(".webp") &&
+      !expectedOutputs.has(existingOutput)
+    ) {
+      await unlink(path.join(imageDirectory, existingOutput));
+    }
+  }
 
   for (const width of widths) {
     const output = path.join(imageDirectory, `${photo.name}-${width}.webp`);

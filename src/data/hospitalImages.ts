@@ -34,8 +34,8 @@ function createHospitalImage(
 export const hospitalExteriorImage = createHospitalImage(
   "hospital-exterior",
   "Exterior entrance and signage of Elitecare Multispeciality Hospital",
-  1360,
-  765,
+  1672,
+  941,
   "(min-width: 1024px) 45vw, 100vw",
 );
 

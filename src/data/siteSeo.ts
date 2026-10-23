@@ -2,9 +2,9 @@ export const siteOrigin = "https://elitecaremultispecialityhospital.in";
 export const businessName = "Elitecare Multispeciality Hospital";
 export const hospitalPhone = "+919709700201";
 export const hospitalPhoneDisplay = "9709700201";
-export const socialImagePath = "/images/hospital-exterior-1360.webp";
+export const socialImagePath = "/images/hospital-exterior-1672.webp";
 export const socialImageAlt = "Exterior entrance and signage of Elitecare Multispeciality Hospital";
-export const socialImageDimensions = { width: 1360, height: 765 };
+export const socialImageDimensions = { width: 1672, height: 941 };
 
 export type PageSeo = {
   path: string;

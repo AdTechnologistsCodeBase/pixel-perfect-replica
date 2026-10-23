@@ -24,7 +24,7 @@ export function Layout() {
   const navClass = ({ isActive }: { isActive: boolean }) =>
     `min-h-11 rounded-lg px-3 py-2 text-sm font-medium transition ${
       isActive
-        ? "bg-emerald-50 text-emerald-800"
+        ? "bg-blue-50 text-blue-800"
         : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
     }`;
 
@@ -33,7 +33,7 @@ export function Layout() {
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link to="/" className="flex min-h-12 items-center gap-3" aria-label="Elitecare home">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-100 text-lg font-bold text-emerald-800">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-lg font-bold text-blue-800">
               E
             </div>
             <div>
@@ -61,14 +61,14 @@ export function Layout() {
             <a
               href={`tel:${hospitalPhone}`}
               aria-label="Call Elitecare Multispeciality Hospital"
-              className="site-button inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-50 sm:px-4"
+              className="site-button inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-blue-700 px-3 py-2 text-sm font-semibold text-blue-800 transition hover:bg-blue-50 sm:px-4"
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
               <span className="hidden sm:inline">Call</span>
             </a>
             <Link
               to="/contact/"
-              className="site-button hidden min-h-11 items-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 sm:inline-flex"
+              className="site-button hidden min-h-11 items-center gap-2 rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-800 sm:inline-flex"
             >
               Contact <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
@@ -115,7 +115,7 @@ export function Layout() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/15 text-lg font-bold text-emerald-300">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/15 text-lg font-bold text-blue-300">
                 E
               </div>
               <div>
@@ -141,7 +141,7 @@ export function Layout() {
             </address>
             <a
               href={`tel:${hospitalPhone}`}
-              className="mt-3 inline-flex min-h-9 items-center py-1 text-sm font-semibold text-emerald-300 hover:text-white"
+              className="mt-3 inline-flex min-h-9 items-center py-1 text-sm font-semibold text-blue-300 hover:text-white"
             >
               {hospitalPhoneDisplay}
             </a>
@@ -184,7 +184,7 @@ export function Layout() {
                 href="https://www.vtechnex.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-emerald-300 underline-offset-4 transition hover:text-white hover:underline"
+                className="font-semibold text-blue-300 underline-offset-4 transition hover:text-white hover:underline"
               >
                 Vtechnex
               </a>

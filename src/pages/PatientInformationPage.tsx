@@ -9,7 +9,7 @@ export function PatientInformationPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
       <header className="site-enter mb-10 max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">
           Patient information
         </p>
         <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900">
@@ -46,20 +46,20 @@ export function PatientInformationPage() {
           </p>
           <p className="mt-4 leading-7 text-slate-700">
             If you use the phone link, your call is made through your device and telephone provider;
-            the website does not receive call details. The directions link opens Google Maps, which
-            is governed by Google’s own privacy terms.
+            the website does not receive call details. The location map and directions link use
+            Google Maps, which is governed by Google’s own privacy terms.
           </p>
         </section>
 
-        <section className="site-card rounded-3xl border border-emerald-200 bg-emerald-50 p-7 md:p-8">
-          <h2 className="text-xl font-bold text-emerald-950">Contact and location</h2>
-          <p className="mt-3 leading-7 text-emerald-950">
+        <section className="site-card rounded-3xl border border-blue-200 bg-blue-50 p-7 md:p-8">
+          <h2 className="text-xl font-bold text-blue-950">Contact and location</h2>
+          <p className="mt-3 leading-7 text-blue-950">
             Call {hospitalPhoneDisplay} or view the hospital address and directions on the contact
             page.
           </p>
           <Link
             to="/contact/"
-            className="site-button mt-5 inline-flex min-h-11 items-center rounded-full bg-emerald-800 px-5 py-2.5 font-semibold text-white hover:bg-emerald-900"
+            className="site-button mt-5 inline-flex min-h-11 items-center rounded-full bg-blue-800 px-5 py-2.5 font-semibold text-white hover:bg-blue-900"
           >
             Contact the hospital
           </Link>

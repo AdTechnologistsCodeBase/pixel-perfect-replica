@@ -9,9 +9,7 @@ export function AboutPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
       <div className="site-enter mb-10 max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
-          About us
-        </p>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">About us</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900">
           Elitecare Multispeciality Hospital
         </h1>
@@ -31,13 +29,13 @@ export function AboutPage() {
           </p>
           <Link
             to="/doctors/"
-            className="site-button mt-6 inline-flex min-h-11 items-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-800"
+            className="site-button mt-6 inline-flex min-h-11 items-center rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800"
           >
             Meet our doctors
           </Link>
         </div>
 
-        <div className="site-card site-enter site-enter-delay-2 rounded-3xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-sky-50 p-8 shadow-sm">
+        <div className="site-card site-enter site-enter-delay-2 rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-sky-50 p-8 shadow-sm">
           <h2 className="text-2xl font-bold text-slate-900">Services and availability</h2>
           <p className="mt-4 text-base leading-8 text-slate-700">
             See the Medical Services page for the supplied service list. Availability-dependent

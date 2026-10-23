@@ -1,6 +1,7 @@
 # Elitecare Multispeciality Hospital
 
 React + Vite + TypeScript website using React Router, with static HTML prerendering for public routes.
+Public pages use a clinical blue accent palette with reduced-motion-aware transitions.
 
 ## Development
 
@@ -29,7 +30,7 @@ The production build prerenders each public route into static HTML so page conte
 
 ## Hospital photographs
 
-The six supplied original photographs are kept in `src/assets/hospital-photo-sources/`. The build converts them into compressed, responsive WebP sizes in `public/images/`; page markup selects the appropriate size, and below-the-fold photos load lazily. The hospital exterior is prioritized for the homepage and used in social sharing metadata. The supplied logo generates the favicon and touch icons from `src/assets/elitecare-logo.png`. Vercel caches image and icon responses for a week with stale-while-revalidate.
+The six supplied original photographs are kept in `src/assets/hospital-photo-sources/`. The hospital front image `hospitalfrontimages.png` is converted into compressed, responsive WebP sizes in `public/images/`; page markup selects the appropriate size, and below-the-fold photos load lazily. The front image is prioritized for the homepage and used in social sharing metadata. The supplied logo generates the favicon and touch icons from `src/assets/elitecare-logo.png`. Vercel caches image and icon responses for a week with stale-while-revalidate.
 
 ## SEO documentation
 
@@ -37,4 +38,4 @@ See [docs/seo-launch-checklist.md](./docs/seo-launch-checklist.md) for the page 
 
 ## Supplied contact information
 
-The owner supplied the hospital name, phone number, street address, and six photographs. Contact the hospital to verify availability-dependent services and home visits. This website does not accept online enquiries. No doctor profiles, opening hours, credentials, or external Google-account changes have been added.
+The owner supplied the hospital name, phone number, street address, doctor names and qualifications, and six photographs. Doctor qualifications are displayed as supplied; verify them before publication. Contact the hospital to verify availability-dependent services and home visits. This website does not accept online enquiries. No opening hours or external Google-account changes have been added.

@@ -12,7 +12,7 @@ export function ServicesPage() {
     <div className="bg-slate-50">
       <section className="bg-white">
         <div className="site-enter mx-auto max-w-7xl px-6 py-14 md:py-20">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Elitecare Multispeciality Hospital · Kondhwa, Pune
           </p>
           <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
@@ -25,13 +25,13 @@ export function ServicesPage() {
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
               to="/contact/"
-              className="site-button inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white hover:bg-emerald-800"
+              className="site-button inline-flex min-h-12 items-center gap-2 rounded-full bg-blue-700 px-6 py-3 font-semibold text-white hover:bg-blue-800"
             >
               Contact the hospital <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/home-visits/"
-              className="site-button inline-flex min-h-12 items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 hover:border-emerald-700"
+              className="site-button inline-flex min-h-12 items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 hover:border-blue-700"
             >
               Home visit services
             </Link>
@@ -52,9 +52,9 @@ export function ServicesPage() {
               <li key={service.id}>
                 <a
                   href={`#${service.id}`}
-                  className="flex gap-2 rounded-lg px-2 py-1.5 text-sm leading-5 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800"
+                  className="flex gap-2 rounded-lg px-2 py-1.5 text-sm leading-5 text-slate-700 hover:bg-blue-50 hover:text-blue-800"
                 >
-                  <span className="shrink-0 text-emerald-700">
+                  <span className="shrink-0 text-blue-700">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   {service.title}
@@ -89,7 +89,7 @@ export function ServicesPage() {
                 className="site-card scroll-mt-28 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8"
               >
                 <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-sm font-bold text-emerald-800">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-sm font-bold text-blue-800">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div className="min-w-0">
@@ -103,7 +103,7 @@ export function ServicesPage() {
                           className="flex items-start gap-2 text-sm leading-6 text-slate-700"
                         >
                           <span
-                            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600"
+                            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600"
                             aria-hidden="true"
                           />
                           {item}
@@ -118,7 +118,7 @@ export function ServicesPage() {
                     {service.id === "geriatric-care-doctor-home-visits" && (
                       <Link
                         to="/home-visits/"
-                        className="site-button mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-800"
+                        className="site-button mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
                       >
                         Home Visit Details <ArrowRight className="h-4 w-4" />
                       </Link>
@@ -129,15 +129,15 @@ export function ServicesPage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-2xl bg-emerald-950 p-6 text-white md:p-8">
+          <div className="mt-8 rounded-2xl bg-blue-950 p-6 text-white md:p-8">
             <h2 className="text-xl font-bold">Need to contact the hospital?</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-emerald-50">
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-blue-50">
               Call the hospital to confirm current service availability. An email contact is not
               currently available through this website.
             </p>
             <Link
               to="/contact/"
-              className="site-button mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-emerald-300 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-900"
+              className="site-button mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-blue-300 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-900"
             >
               <PhoneCall className="h-4 w-4" aria-hidden="true" /> Contact details
             </Link>

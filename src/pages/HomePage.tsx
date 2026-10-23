@@ -45,10 +45,10 @@ export function HomePage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-emerald-50 via-white to-sky-50">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-sky-50">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
           <div className="site-enter">
-            <div className="mb-5 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
+            <div className="mb-5 inline-flex items-center rounded-full border border-blue-200 bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-800">
               Elitecare Multispeciality Hospital · Kondhwa, Pune
             </div>
             <h1 className="max-w-2xl text-4xl font-black tracking-tight text-slate-900 md:text-6xl">
@@ -62,20 +62,18 @@ export function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 to="/services/"
-                className="site-button inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-emerald-800"
+                className="site-button inline-flex min-h-12 items-center gap-2 rounded-full bg-blue-700 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-blue-800"
               >
                 Explore Medical Services <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/contact/"
-                className="site-button inline-flex min-h-12 items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 transition hover:border-emerald-700"
+                className="site-button inline-flex min-h-12 items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 transition hover:border-blue-700"
               >
                 Location &amp; Contact
               </Link>
             </div>
-            <p className="mt-6 text-sm font-semibold text-emerald-900">
-              Your Health. Our Priority.
-            </p>
+            <p className="mt-6 text-sm font-semibold text-blue-900">Your Health. Our Priority.</p>
           </div>
 
           <Link
@@ -101,14 +99,14 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="bg-emerald-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-200">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-200">
               Emergency care
             </p>
             <h2 className="mt-2 text-2xl font-bold md:text-3xl">Emergency &amp; Trauma Care</h2>
-            <p className="mt-3 max-w-3xl leading-7 text-emerald-50">
+            <p className="mt-3 max-w-3xl leading-7 text-blue-50">
               Supplied information lists trauma assessment, wound management, initial stabilization,
               and emergency referral. Confirm current staffing and service availability with the
               hospital.
@@ -116,11 +114,11 @@ export function HomePage() {
           </div>
           <Link
             to="/services/#emergency-trauma-care"
-            className="site-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-emerald-300 px-5 py-3 font-semibold text-white transition hover:bg-emerald-900"
+            className="site-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-blue-300 px-5 py-3 font-semibold text-white transition hover:bg-blue-900"
           >
             Emergency service details <ArrowRight className="h-4 w-4" />
           </Link>
-          <p className="text-sm leading-6 text-emerald-100 md:col-span-2">
+          <p className="text-sm leading-6 text-blue-100 md:col-span-2">
             The supplied service list includes emergency and trauma care; staffing and availability
             must be confirmed with the hospital. For life-threatening symptoms, seek emergency
             assistance immediately from local emergency services.
@@ -130,7 +128,7 @@ export function HomePage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Medical services
           </p>
           <h2 className="mt-3 text-3xl font-black text-slate-900 md:text-4xl">
@@ -150,9 +148,9 @@ export function HomePage() {
                 .toLowerCase()
                 .replaceAll(/[^a-z0-9]+/g, "-")
                 .replace(/^-|-$/g, "")}`}
-              className="site-card group flex min-h-24 items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md"
+              className="site-card group flex min-h-24 items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-300 hover:shadow-md"
             >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-100">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-700 group-hover:bg-blue-100">
                 <Icon className="h-6 w-6" aria-hidden="true" />
               </span>
               <span className="font-semibold leading-6 text-slate-800">{title}</span>
@@ -163,7 +161,7 @@ export function HomePage() {
         <div className="mt-8 text-center">
           <Link
             to="/services/"
-            className="font-semibold text-emerald-800 underline underline-offset-4"
+            className="font-semibold text-blue-800 underline underline-offset-4"
           >
             View all service details
           </Link>
@@ -186,10 +184,10 @@ export function HomePage() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <span className="mb-4 inline-flex rounded-full bg-white p-3 text-emerald-700 shadow-sm">
+            <span className="mb-4 inline-flex rounded-full bg-white p-3 text-blue-700 shadow-sm">
               <House className="h-6 w-6" aria-hidden="true" />
             </span>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
               Home visit services
             </p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-slate-900 md:text-4xl">
@@ -201,7 +199,7 @@ export function HomePage() {
             </p>
             <Link
               to="/home-visits/"
-              className="site-button mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white transition hover:bg-emerald-800"
+              className="site-button mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-blue-700 px-6 py-3 font-semibold text-white transition hover:bg-blue-800"
             >
               Home Visit Information <ArrowRight className="h-4 w-4" />
             </Link>
@@ -212,7 +210,7 @@ export function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <div className="site-card grid gap-8 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:grid-cols-[1fr_auto] md:items-center md:p-10">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
               Our hospital
             </p>
             <h2 className="mt-2 text-3xl font-black text-slate-900">A closer look at Elitecare</h2>
@@ -223,7 +221,7 @@ export function HomePage() {
           </div>
           <Link
             to="/hospital/"
-            className="site-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-emerald-700 px-6 py-3 font-semibold text-emerald-800 transition hover:bg-emerald-50"
+            className="site-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-blue-700 px-6 py-3 font-semibold text-blue-800 transition hover:bg-blue-50"
           >
             Visit Our Hospital <ArrowRight className="h-4 w-4" />
           </Link>

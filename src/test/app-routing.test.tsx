@@ -3,7 +3,7 @@ import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 
 import App from "@/App";
-import { hospitalImages } from "@/data/hospitalImages";
+import { hospitalExteriorImage, hospitalImages } from "@/data/hospitalImages";
 import { medicalServices } from "@/data/medicalServices";
 import { createStructuredData, findPageSeo, seoPages, siteOrigin } from "@/data/siteSeo";
 
@@ -70,7 +70,13 @@ describe("App routing", () => {
     );
     expect(screen.getByRole("link", { name: /get directions/i })).toHaveAttribute(
       "href",
-      expect.stringContaining("google.com/maps/search/"),
+      expect.stringContaining("google.com/maps?output=classic&pb="),
+    );
+    expect(
+      screen.getByTitle("Map showing Elitecare Multispeciality Clinic in Kondhwa, Pune"),
+    ).toHaveAttribute(
+      "src",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.2822923927467!2d73.88683585183759!3d18.458068459722455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb6960b29243%3A0x8b4d48687ce6e36!2sElitecare%20Multispeciality%20Clinic!5e0!3m2!1sen!2sin!4v1792767158885!5m2!1sen!2sin",
     );
   });
 
@@ -88,7 +94,7 @@ describe("App routing", () => {
     );
     expect(document.querySelector('meta[property="og:image"]')).toHaveAttribute(
       "content",
-      `${siteOrigin}/images/hospital-exterior-1360.webp`,
+      `${siteOrigin}/images/hospital-exterior-1672.webp`,
     );
 
     const schema = createStructuredData(seoPages.contact);
@@ -220,7 +226,26 @@ describe("App routing", () => {
     });
     expect(heroImage).toHaveAttribute("fetchpriority", "high");
     expect(heroImage).toHaveAttribute("srcset");
+    expect(hospitalExteriorImage).toMatchObject({
+      src: "/images/hospital-exterior-1672.webp",
+      width: 1672,
+      height: 941,
+    });
+    expect(hospitalExteriorImage.srcSet).toContain("/images/hospital-exterior-1024.webp 1024w");
     expect(heroImage).not.toHaveAttribute("loading", "lazy");
+  });
+
+  it("uses blue accents instead of green on primary hospital actions", () => {
+    render(
+      <MemoryRouter initialEntries={["/"]}>
+        <App />
+      </MemoryRouter>,
+    );
+
+    expect(screen.getByRole("link", { name: /explore medical services/i })).toHaveClass(
+      "bg-blue-700",
+      "hover:bg-blue-800",
+    );
   });
 
   it("opens mobile navigation and closes it after a route is selected", () => {
