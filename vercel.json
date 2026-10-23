@@ -1,0 +1,40 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/departments", "destination": "/services/", "permanent": true },
+    { "source": "/departments/", "destination": "/services/", "permanent": true },
+    { "source": "/facilities", "destination": "/hospital/", "permanent": true },
+    { "source": "/facilities/", "destination": "/hospital/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/home/", "destination": "/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-32x32.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/apple-touch-icon.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    }
+  ]
+}

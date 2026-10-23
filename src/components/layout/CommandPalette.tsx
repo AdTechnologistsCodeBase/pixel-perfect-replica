@@ -1,7 +1,14 @@
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate } from "react-router-dom";
 import { FilePlus2 } from "lucide-react";
 import { useEffect } from "react";
-import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
+import {
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
 import { NAV } from "@/components/navigation/nav";
 import { useProjects } from "@/stores/projects";
 import { useUI } from "@/stores/ui";
@@ -35,18 +42,24 @@ export function CommandPalette() {
       <CommandList>
         <CommandEmpty>No results.</CommandEmpty>
         <CommandGroup heading="Actions">
-          <CommandItem onSelect={() => run(() => openNew())}><FilePlus2 className="mr-2 size-4" /> New project</CommandItem>
+          <CommandItem onSelect={() => run(() => openNew())}>
+            <FilePlus2 className="mr-2 size-4" /> New project
+          </CommandItem>
         </CommandGroup>
         <CommandGroup heading="Go to">
           {NAV.map((n) => (
-            <CommandItem key={n.to} onSelect={() => run(() => navigate({ to: n.to }))}>
+            <CommandItem key={n.to} onSelect={() => run(() => navigate(n.to))}>
               <n.icon className="mr-2 size-4" /> {n.label}
             </CommandItem>
           ))}
         </CommandGroup>
         <CommandGroup heading="Projects">
           {projects.map((p) => (
-            <CommandItem key={p.id} value={`project ${p.name}`} onSelect={() => run(() => navigate({ to: "/editor", search: { id: p.id } }))}>
+            <CommandItem
+              key={p.id}
+              value={`project ${p.name}`}
+              onSelect={() => run(() => navigate(`/editor?id=${encodeURIComponent(p.id)}`))}
+            >
               {p.name}
             </CommandItem>
           ))}
