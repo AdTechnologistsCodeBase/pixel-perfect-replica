@@ -11,7 +11,7 @@ export function ServicesPage() {
   return (
     <div className="bg-slate-50">
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:py-20">
+        <div className="site-enter mx-auto max-w-7xl px-6 py-14 md:py-20">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">
             Elitecare Multispeciality Hospital · Kondhwa, Pune
           </p>
@@ -25,13 +25,13 @@ export function ServicesPage() {
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
               to="/contact/"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white hover:bg-emerald-800"
+              className="site-button inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white hover:bg-emerald-800"
             >
               Contact the hospital <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/home-visits/"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 hover:border-emerald-700"
+              className="site-button inline-flex min-h-12 items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 hover:border-emerald-700"
             >
               Home visit services
             </Link>
@@ -86,7 +86,7 @@ export function ServicesPage() {
               <section
                 id={service.id}
                 key={service.id}
-                className="scroll-mt-28 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8"
+                className="site-card scroll-mt-28 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8"
               >
                 <div className="flex items-start gap-4">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-sm font-bold text-emerald-800">
@@ -118,7 +118,7 @@ export function ServicesPage() {
                     {service.id === "geriatric-care-doctor-home-visits" && (
                       <Link
                         to="/home-visits/"
-                        className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-800"
+                        className="site-button mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-800"
                       >
                         Home Visit Details <ArrowRight className="h-4 w-4" />
                       </Link>
@@ -137,7 +137,7 @@ export function ServicesPage() {
             </p>
             <Link
               to="/contact/"
-              className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-emerald-300 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-900"
+              className="site-button mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-emerald-300 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-900"
             >
               <PhoneCall className="h-4 w-4" aria-hidden="true" /> Contact details
             </Link>

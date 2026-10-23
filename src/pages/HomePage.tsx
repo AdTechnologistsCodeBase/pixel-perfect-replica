@@ -47,7 +47,7 @@ export function HomePage() {
     <>
       <section className="bg-gradient-to-br from-emerald-50 via-white to-sky-50">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
-          <div>
+          <div className="site-enter">
             <div className="mb-5 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
               Elitecare Multispeciality Hospital · Kondhwa, Pune
             </div>
@@ -62,13 +62,13 @@ export function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 to="/services/"
-                className="inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-emerald-800"
+                className="site-button inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-emerald-800"
               >
                 Explore Medical Services <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/contact/"
-                className="inline-flex min-h-12 items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 transition hover:border-emerald-700"
+                className="site-button inline-flex min-h-12 items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 transition hover:border-emerald-700"
               >
                 Location &amp; Contact
               </Link>
@@ -81,7 +81,7 @@ export function HomePage() {
           <Link
             to="/hospital/"
             aria-label="View Elitecare Hospital photographs"
-            className="group relative block overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-2 shadow-[0_20px_60px_rgba(15,23,42,0.14)]"
+            className="site-card site-enter site-enter-delay-1 group relative block overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-2 shadow-[0_20px_60px_rgba(15,23,42,0.14)]"
           >
             <img
               src={hospitalExteriorImage.src}
@@ -116,7 +116,7 @@ export function HomePage() {
           </div>
           <Link
             to="/services/#emergency-trauma-care"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-emerald-300 px-5 py-3 font-semibold text-white transition hover:bg-emerald-900"
+            className="site-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-emerald-300 px-5 py-3 font-semibold text-white transition hover:bg-emerald-900"
           >
             Emergency service details <ArrowRight className="h-4 w-4" />
           </Link>
@@ -150,7 +150,7 @@ export function HomePage() {
                 .toLowerCase()
                 .replaceAll(/[^a-z0-9]+/g, "-")
                 .replace(/^-|-$/g, "")}`}
-              className="group flex min-h-24 items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md"
+              className="site-card group flex min-h-24 items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-100">
                 <Icon className="h-6 w-6" aria-hidden="true" />
@@ -172,7 +172,7 @@ export function HomePage() {
 
       <section className="bg-sky-50">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-20">
-          <div className="order-2 overflow-hidden rounded-3xl border border-slate-200 bg-white p-2 shadow-sm md:order-1">
+          <div className="site-card order-2 overflow-hidden rounded-3xl border border-slate-200 bg-white p-2 shadow-sm md:order-1">
             <img
               src={hospitalReceptionImage.src}
               srcSet={hospitalReceptionImage.srcSet}
@@ -201,7 +201,7 @@ export function HomePage() {
             </p>
             <Link
               to="/home-visits/"
-              className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white transition hover:bg-emerald-800"
+              className="site-button mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white transition hover:bg-emerald-800"
             >
               Home Visit Information <ArrowRight className="h-4 w-4" />
             </Link>
@@ -210,7 +210,7 @@ export function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <div className="grid gap-8 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:grid-cols-[1fr_auto] md:items-center md:p-10">
+        <div className="site-card grid gap-8 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:grid-cols-[1fr_auto] md:items-center md:p-10">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">
               Our hospital
@@ -223,7 +223,7 @@ export function HomePage() {
           </div>
           <Link
             to="/hospital/"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-emerald-700 px-6 py-3 font-semibold text-emerald-800 transition hover:bg-emerald-50"
+            className="site-button inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-emerald-700 px-6 py-3 font-semibold text-emerald-800 transition hover:bg-emerald-50"
           >
             Visit Our Hospital <ArrowRight className="h-4 w-4" />
           </Link>

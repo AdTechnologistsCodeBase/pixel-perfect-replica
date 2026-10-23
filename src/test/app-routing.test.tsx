@@ -22,6 +22,24 @@ describe("App routing", () => {
     ).toBeInTheDocument();
   });
 
+  it("credits Vtechnex in the footer with its official website link", () => {
+    render(
+      <MemoryRouter initialEntries={["/"]}>
+        <App />
+      </MemoryRouter>,
+    );
+
+    expect(screen.getByRole("link", { name: "Vtechnex" })).toHaveAttribute(
+      "href",
+      "https://www.vtechnex.com/",
+    );
+    expect(screen.getByRole("link", { name: "Vtechnex" })).toHaveAttribute(
+      "rel",
+      "noopener noreferrer",
+    );
+    expect(screen.getByText(/website built by/i)).toBeInTheDocument();
+  });
+
   it("renders the not-found page for unknown paths", () => {
     render(
       <MemoryRouter initialEntries={["/unknown"]}>
@@ -97,8 +115,46 @@ describe("App routing", () => {
     expect(indexablePages.every((page) => page.description.length > 0)).toBe(true);
     expect(indexablePages.every((page) => page.canonicalPath.startsWith("/"))).toBe(true);
     expect(findPageSeo("/about/")).toBe(seoPages.about);
-    expect(seoPages.doctors.indexable).toBe(false);
+    expect(seoPages.doctors.indexable).toBe(true);
     expect(seoPages.notFound.indexable).toBe(false);
+  });
+
+  it("publishes the supplied doctor profiles and clinic description", () => {
+    render(
+      <MemoryRouter initialEntries={["/doctors"]}>
+        <App />
+      </MemoryRouter>,
+    );
+
+    expect(
+      screen.getByRole("heading", { name: "Dr. Arbaaz Shakil Khan", level: 2 }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/M\.B\.B\.S\./i)).toBeInTheDocument();
+    expect(screen.getByText(/HBTMC Mumbai/i)).toBeInTheDocument();
+    expect(screen.getByText(/Dr\. R\.N\. Cooper Hospital/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Dr. Akeel Shakil Khan", level: 2 }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/M\.D\. \(Mumbai\)/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/quality, affordable, and patient-centered healthcare for all age groups/i),
+    ).toBeInTheDocument();
+  });
+
+  it("introduces the clinic on the About page and links to doctor profiles", () => {
+    render(
+      <MemoryRouter initialEntries={["/about"]}>
+        <App />
+      </MemoryRouter>,
+    );
+
+    expect(
+      screen.getByText(/preventive care, health check-ups, vaccinations, and minor procedures/i),
+    ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /meet our doctors/i })).toHaveAttribute(
+      "href",
+      "/doctors/",
+    );
   });
 
   it("renders all supplied medical service categories", () => {

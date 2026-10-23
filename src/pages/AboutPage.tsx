@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { seoPages } from "@/data/siteSeo";
 
@@ -6,7 +8,7 @@ export function AboutPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <div className="mb-10 max-w-2xl">
+      <div className="site-enter mb-10 max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
           About us
         </p>
@@ -14,20 +16,28 @@ export function AboutPage() {
           Elitecare Multispeciality Hospital
         </h1>
         <p className="mt-4 text-lg leading-8 text-slate-600">
-          Your Health. Our Priority. Serving Kondhwa, Pune, Maharashtra.
+          Your Health, Our Priority. Serving Kondhwa, Pune, Maharashtra.
         </p>
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-          <h2 className="text-2xl font-bold text-slate-900">Hospital information</h2>
+        <div className="site-card site-enter site-enter-delay-1 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-900">Our commitment to your care</h2>
           <p className="mt-4 text-base leading-8 text-slate-600">
-            Elitecare Multispeciality Hospital is located in Kondhwa, Pune, Maharashtra. The
-            hospital information on this website is based on details supplied by the owner.
+            Elitecare Multispeciality Clinic provides quality, affordable, and patient-centered
+            healthcare for all age groups. We offer consultation, diagnosis, treatment, preventive
+            care, health check-ups, vaccinations, and minor procedures with a commitment to ethical
+            medical practice and compassionate care.
           </p>
+          <Link
+            to="/doctors/"
+            className="site-button mt-6 inline-flex min-h-11 items-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-800"
+          >
+            Meet our doctors
+          </Link>
         </div>
 
-        <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-sky-50 p-8 shadow-sm">
+        <div className="site-card site-enter site-enter-delay-2 rounded-3xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-sky-50 p-8 shadow-sm">
           <h2 className="text-2xl font-bold text-slate-900">Services and availability</h2>
           <p className="mt-4 text-base leading-8 text-slate-700">
             See the Medical Services page for the supplied service list. Availability-dependent

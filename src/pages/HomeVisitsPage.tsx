@@ -19,7 +19,7 @@ export function HomeVisitsPage() {
     <div className="bg-slate-50">
       <section className="bg-emerald-950 text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 md:grid-cols-[1fr_auto] md:py-20">
-          <div>
+          <div className="site-enter">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-200">
               Kondhwa and nearby areas of Pune
             </p>
@@ -32,12 +32,12 @@ export function HomeVisitsPage() {
             </p>
             <a
               href={`tel:${hospitalPhone}`}
-              className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-emerald-950 hover:bg-emerald-50"
+              className="site-button mt-7 inline-flex min-h-12 items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-emerald-950 hover:bg-emerald-50"
             >
               Call to Ask About Home Visits <ArrowRight className="h-4 w-4" />
             </a>
           </div>
-          <span className="hidden h-24 w-24 items-center justify-center rounded-3xl bg-white/10 text-emerald-200 md:flex">
+          <span className="site-enter site-enter-delay-1 hidden h-24 w-24 items-center justify-center rounded-3xl bg-white/10 text-emerald-200 md:flex">
             <HandHeart className="h-12 w-12" aria-hidden="true" />
           </span>
         </div>
@@ -56,7 +56,7 @@ export function HomeVisitsPage() {
             Contact the hospital to confirm appointment and doctor availability before making plans.
           </p>
         </div>
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+        <div className="site-card rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
           <ul className="grid gap-x-10 gap-y-4 sm:grid-cols-2">
             {homeVisitService.items.map((item) => (
               <li key={item} className="flex items-start gap-3 text-slate-700">
@@ -77,7 +77,7 @@ export function HomeVisitsPage() {
           </p>
           <a
             href={`tel:${hospitalPhone}`}
-            className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white hover:bg-emerald-800"
+            className="site-button mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white hover:bg-emerald-800"
           >
             Call to Ask About Home Visits <ArrowRight className="h-4 w-4" />
           </a>

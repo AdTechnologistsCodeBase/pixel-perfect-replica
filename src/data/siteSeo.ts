@@ -73,10 +73,10 @@ export const seoPages = {
   doctors: {
     path: "/doctors",
     canonicalPath: "/doctors/",
-    title: "Doctors | Elitecare Multispeciality Hospital",
+    title: "Our Doctors | Elitecare Multispeciality Clinic, Pune",
     description:
-      "Doctor profiles are not published because verified names and qualifications have not been supplied.",
-    indexable: false,
+      "Meet Dr. Arbaaz Shakil Khan (M.B.B.S.) and Dr. Akeel Shakil Khan (M.D. Mumbai) at Elitecare Multispeciality Clinic in Kondhwa, Pune.",
+    indexable: true,
   },
   notFound: {
     path: "/not-found",

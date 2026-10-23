@@ -8,7 +8,7 @@ export function PatientInformationPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
-      <header className="mb-10 max-w-3xl">
+      <header className="site-enter mb-10 max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
           Patient information
         </p>
@@ -22,7 +22,7 @@ export function PatientInformationPage() {
       </header>
 
       <div className="space-y-6">
-        <section className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
+        <section className="site-card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
           <h2 className="text-2xl font-bold text-slate-900">Medical information and emergencies</h2>
           <p className="mt-4 leading-7 text-slate-700">
             Website content describes services supplied by the hospital and is general information,
@@ -36,7 +36,7 @@ export function PatientInformationPage() {
           </p>
         </section>
 
-        <section className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
+        <section className="site-card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-8">
           <h2 className="text-2xl font-bold text-slate-900">Website privacy</h2>
           <p className="mt-4 leading-7 text-slate-700">
             This website currently has no appointment or enquiry form and does not load analytics or
@@ -51,7 +51,7 @@ export function PatientInformationPage() {
           </p>
         </section>
 
-        <section className="rounded-3xl border border-emerald-200 bg-emerald-50 p-7 md:p-8">
+        <section className="site-card rounded-3xl border border-emerald-200 bg-emerald-50 p-7 md:p-8">
           <h2 className="text-xl font-bold text-emerald-950">Contact and location</h2>
           <p className="mt-3 leading-7 text-emerald-950">
             Call {hospitalPhoneDisplay} or view the hospital address and directions on the contact
@@ -59,7 +59,7 @@ export function PatientInformationPage() {
           </p>
           <Link
             to="/contact/"
-            className="mt-5 inline-flex min-h-11 items-center rounded-full bg-emerald-800 px-5 py-2.5 font-semibold text-white hover:bg-emerald-900"
+            className="site-button mt-5 inline-flex min-h-11 items-center rounded-full bg-emerald-800 px-5 py-2.5 font-semibold text-white hover:bg-emerald-900"
           >
             Contact the hospital
           </Link>

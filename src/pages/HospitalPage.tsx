@@ -37,7 +37,7 @@ export function HospitalPage() {
   return (
     <div className="bg-slate-50">
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:py-20">
+        <div className="site-enter mx-auto max-w-7xl px-6 py-14 md:py-20">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">
             Elitecare Multispeciality Hospital · Kondhwa, Pune
           </p>
@@ -59,7 +59,7 @@ export function HospitalPage() {
               type="button"
               onClick={() => setSelectedImage(index)}
               aria-label={`Open photo: ${image.alt}`}
-              className={`group relative min-h-0 overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 ${
+              className={`site-card group relative min-h-0 overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 ${
                 index === 0 ? "sm:col-span-2 lg:row-span-2" : ""
               }`}
             >

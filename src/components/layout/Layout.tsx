@@ -30,7 +30,7 @@ export function Layout() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
+      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link to="/" className="flex min-h-12 items-center gap-3" aria-label="Elitecare home">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-100 text-lg font-bold text-emerald-800">
@@ -61,14 +61,14 @@ export function Layout() {
             <a
               href={`tel:${hospitalPhone}`}
               aria-label="Call Elitecare Multispeciality Hospital"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-50 sm:px-4"
+              className="site-button inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-emerald-700 px-3 py-2 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-50 sm:px-4"
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
               <span className="hidden sm:inline">Call</span>
             </a>
             <Link
               to="/contact/"
-              className="hidden min-h-11 items-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 sm:inline-flex"
+              className="site-button hidden min-h-11 items-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 sm:inline-flex"
             >
               Contact <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
@@ -161,6 +161,9 @@ export function Layout() {
               <Link to="/home-visits/" className="min-h-9 py-1 hover:text-white">
                 Home Visits
               </Link>
+              <Link to="/doctors/" className="min-h-9 py-1 hover:text-white">
+                Our Doctors
+              </Link>
               <Link to="/contact/" className="min-h-9 py-1 hover:text-white">
                 Contact Us
               </Link>
@@ -175,6 +178,17 @@ export function Layout() {
           <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-4 text-xs text-slate-300 sm:flex-row sm:items-center sm:justify-between">
             <span>© {new Date().getFullYear()} Elitecare Multispeciality Hospital</span>
             <span>Your Health. Our Priority.</span>
+            <span>
+              Website built by{" "}
+              <a
+                href="https://www.vtechnex.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-emerald-300 underline-offset-4 transition hover:text-white hover:underline"
+              >
+                Vtechnex
+              </a>
+            </span>
           </div>
         </div>
       </footer>
