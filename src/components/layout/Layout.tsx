@@ -2,6 +2,7 @@ import { ArrowRight, Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 
+import logo from "@/assets/logo.png";
 import { hospitalPhone, hospitalPhoneDisplay } from "@/data/siteSeo";
 
 const navItems = [
@@ -22,7 +23,7 @@ export function Layout() {
   }, [pathname]);
 
   const navClass = ({ isActive }: { isActive: boolean }) =>
-    `min-h-11 rounded-lg px-3 py-2 text-sm font-medium transition ${
+    `site-nav-link min-h-11 rounded-lg px-3 py-2 text-sm font-medium transition ${
       isActive
         ? "bg-blue-50 text-blue-800"
         : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
@@ -30,12 +31,18 @@ export function Layout() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur-sm">
+      <header className="site-header sticky top-0 z-40 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-          <Link to="/" className="flex min-h-12 items-center gap-3" aria-label="Elitecare home">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-lg font-bold text-blue-800">
-              E
-            </div>
+          <Link
+            to="/"
+            className="site-brand flex min-h-12 items-center gap-3"
+            aria-label="Elitecare home"
+          >
+            <img
+              src={logo}
+              alt="Elitecare Multispeciality Hospital logo"
+              className="h-12 w-12 shrink-0 rounded-xl bg-white object-contain"
+            />
             <div>
               <div className="text-lg font-extrabold tracking-tight text-slate-900">ELITECARE</div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-slate-600">
@@ -107,7 +114,7 @@ export function Layout() {
         </nav>
       </header>
 
-      <main>
+      <main key={pathname} className="site-page-enter">
         <Outlet />
       </main>
 
@@ -115,9 +122,12 @@ export function Layout() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/15 text-lg font-bold text-blue-300">
-                E
-              </div>
+              <img
+                src={logo}
+                alt=""
+                aria-hidden="true"
+                className="h-11 w-11 rounded-xl bg-white object-contain"
+              />
               <div>
                 <div className="text-lg font-extrabold text-white">ELITECARE</div>
                 <div className="text-[10px] uppercase tracking-[0.2em] text-slate-300">

@@ -165,6 +165,21 @@
   }
 }
 
+.site-page-enter {
+  animation: site-page-enter 420ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+@keyframes site-page-enter {
+  from {
+    opacity: 0.75;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .site-enter {
   animation: site-enter 650ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
 }
@@ -192,6 +207,53 @@
     border-color 180ms ease;
 }
 
+.site-header {
+  animation: site-header-enter 500ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.site-brand img {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.site-nav-link {
+  position: relative;
+}
+
+.site-nav-link::after {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.25rem;
+  left: 0.75rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.site-nav-link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.site-button svg {
+  transition: transform 180ms ease;
+}
+
+@keyframes site-header-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (hover: hover) {
   .site-card:hover {
     transform: translateY(-4px);
@@ -203,6 +265,19 @@
     transform: translateY(-2px);
     box-shadow: 0 10px 20px -14px rgb(15 23 42 / 45%);
   }
+
+  .site-brand:hover img {
+    transform: scale(1.04);
+    box-shadow: 0 8px 18px -12px rgb(15 23 42 / 45%);
+  }
+
+  .site-nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .site-button:hover svg {
+    transform: translateX(3px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -211,10 +286,18 @@
   }
 
   .site-enter,
+  .site-page-enter,
+  .site-header,
   .site-card,
   .site-button,
   .site-card:hover,
-  .site-button:hover {
+  .site-button:hover,
+  .site-brand img,
+  .site-brand:hover img,
+  .site-nav-link::after,
+  .site-nav-link:hover::after,
+  .site-button svg,
+  .site-button:hover svg {
     animation: none;
     transition: none;
     transform: none;

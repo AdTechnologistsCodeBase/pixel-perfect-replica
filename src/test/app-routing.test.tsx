@@ -20,6 +20,9 @@ describe("App routing", () => {
         name: /medical services in kondhwa, pune/i,
       }),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole("img", { name: "Elitecare Multispeciality Hospital logo" }),
+    ).toHaveAttribute("src", expect.stringContaining("logo"));
   });
 
   it("credits Vtechnex in the footer with its official website link", () => {
@@ -207,7 +210,9 @@ describe("App routing", () => {
     expect(screen.getAllByRole("button", { name: /open photo:/i })).toHaveLength(
       hospitalImages.length,
     );
-    const galleryImages = screen.getAllByRole("img");
+    const galleryImages = within(
+      screen.getByRole("region", { name: "Hospital photographs" }),
+    ).getAllByRole("img");
     expect(galleryImages.every((image) => image.getAttribute("srcset"))).toBe(true);
     expect(galleryImages.every((image) => image.getAttribute("loading") === "lazy")).toBe(true);
     expect(galleryImages.every((image) => image.getAttribute("width"))).toBe(true);
