@@ -30,7 +30,7 @@ The production build prerenders each public route into static HTML so page conte
 
 ## Hospital photographs
 
-The six supplied original photographs are kept in `src/assets/hospital-photo-sources/`. The hospital front image `hospitalfrontimages.png` is converted into compressed, responsive WebP sizes in `public/images/`; page markup selects the appropriate size, and below-the-fold photos load lazily. The front image is prioritized for the homepage and used in social sharing metadata. The supplied logo generates the favicon and touch icons from `src/assets/elitecare-logo.png`. Vercel caches image and icon responses for a week with stale-while-revalidate.
+The six supplied original photographs are kept in `src/assets/hospital-photo-sources/`. The hospital front image `hospitalfrontimages.png` is converted into compressed, responsive WebP sizes in `public/images/`; page markup selects the appropriate size, and below-the-fold photos load lazily. The front image is prioritized for the homepage and used in social sharing metadata. The supplied logo at `src/assets/logo.png` is copied to `public/logo.png` and used for the favicon and touch icons. Vercel caches image and icon responses for a week with stale-while-revalidate.
 
 ## SEO documentation
 

@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { mkdir, readdir, unlink } from "node:fs/promises";
+import { copyFile, mkdir, readdir, unlink } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
@@ -53,7 +53,8 @@ for (const photo of photos) {
   }
 }
 
-const logoPath = path.join(root, "src", "assets", "elitecare-logo.png");
+const logoPath = path.join(root, "src", "assets", "logo.png");
+await copyFile(logoPath, path.join(publicDirectory, "logo.png"));
 const faviconBuffer = await sharp(logoPath)
   .rotate()
   .resize(512, 512, {
